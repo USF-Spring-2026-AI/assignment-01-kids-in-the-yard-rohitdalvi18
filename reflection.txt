@@ -1,0 +1,39 @@
+● Awad distinguishes between different “types” of AI. What classification scheme does the paper
+use and why do these types matter for scientific research?
+
+Awad’s​‍​‌‍​‍‌ classification is function oriented. It classifies AI based on the role that it plays in the scientific workflow rather than by specific algorithms. The paper contrasts predictive, descriptive, generative, and optimization AI and subsequently mentions cross-cutting types like interpretable (explainable) AI, privacy aware AI, and meta scientific or agentic AI.
+
+ The types are essential because they correspond closely to different research tasks such as:
+- Predictive AI helps model, forecast, and simulate.
+- Descriptive AI helps pattern recognition and explanation.
+- Generative AI helps create new content and hypotheses.
+- Optimization AI helps plan/automate experiments under the given constraints.
+- Interpretable + privacy aware AI are put forward as instruments of trustworthy, responsible scientific use 
+- Meta scientific AI is about the discovery process itself (hypothesis then experiment then analysis), that’s why it’s the one most directly connected to AI impacting how science is ​‍​‌‍​‍‌done.
+
+● Does Awad make a clear distinction between AI as a tool and AI as a scientific collaborator? If so, what are the differences and what are some examples given to support the differences? Do these  examples suggest a real shift in how science is conducted, or mostly an extension of existing methods?
+
+Yes, Awad​‍​‌‍​‍‌ clearly draws a comparison between AI merely as a tool and AI being a kind of knowledge or epistemic generator, and then even going beyond that metaphor with agentic meta scientific AI.
+- AI as a tool: The paper gives quite clear tool examples: e.g. GANs producing synthetic datasets a good solution for privacy and data scarcity problems, and LLMs helping with mundane coding and analysis. 
+- AI as a collaborator: Awad suggests that AI can redo the method of inquiry by producing knowledge through operations, processes which may not always be directly intuitively explainable, and thus may affect what is understood as evidence and explanation.
+- Agentic meta- cientific AI: Awad describes meta scientific AI as systems that are able to produce hypotheses, plan experiments, evaluate data, and integrate information across different disciplines when such systems can plan and execute scientific activities on their own, they become agentic, acting like a junior researcher. 
+
+Awad's way of presenting the matter leaves room for both interpretations:
+- Several examples revolve around augmentations of present computational practices like speedier modeling, more efficient search, and coding assistance.
+- The depiction of agentic meta scientific AI is offered as a major transformative change because it starts to play a role in deciding and ordering scientific steps (hypothesize then design then test then refine), apart from just carrying out the step specified by the ​‍​‌‍​‍‌human.
+
+
+● What are some limitations or risks of using AI in science? How do these relate to issues such as interpretability, bias, reproducibility, or theory formation?
+
+Awad highlights several risks that map cleanly to classic science or AI concerns:
+- Interpretability:​‍​‌‍​‍‌ To explain the scientific findings, it may be difficult to justify the results obtained by a black-box model, thus it is a problem.
+- Bias: AI will take on the biases of the datasets and the samples, which can mislead the findings and even the hypotheses that scientists come up with.
+- Reproducibility: If models, data, or pipelines are not fully documented and shareable, then results can be very unstable in addition to stochastic training effects.
+- Theory formation: AI can enhance prediction without the necessity of causal understanding, thus setting good performance apart from good ​‍​‌‍​‍‌theory.
+
+● According to Awad’s arguments, is AI more likely to accelerate scientific discovery or to reshape the scientific method itself? Do you agree or disagree?
+
+Awad​‍​‌‍​‍‌ is of the opinion that AI will speed up the discovery process and change dramatically some parts of the scientific method. The most significant change would be in the meta scientific or agentic systems area. He even suggests that AI will first be used as a computational helper, then for generating hypotheses, and finally there could be an epistemic change in how evidence and explanation are being formed.
+
+My interpretation:
+In the immediate future, AI just helps to accelerate eg. speed of speed of literature, modelling, coding, simulation, data synthesis. Reshape is a conceptual part of the change that happens when AI systems become agentic when they are the ones deciding what experiment to run next or which hypothesis to prioritize, and humans take the role of stronger verification.
