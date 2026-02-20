@@ -87,7 +87,7 @@ class FamilyTree:
         if decade not in self.pf.rates_by_decade:
             return
 
-        marriage_rate = self.pf.rates_by_decade[decade]
+        marriage_rate, birth_rate = self.pf.rates_by_decade[decade]
 
         # roll probability
         roll = self.pf.rng.random()
@@ -120,7 +120,7 @@ class FamilyTree:
         if person.has_generated_children:
             return []
 
-        birth_rate = self.pf.rates_by_decade[decade]
+        birth_rate, marriage_rate = self.pf.rates_by_decade[decade]
 
         # round up on bounds
         min_kids = int(math.ceil(birth_rate - 1.5))
