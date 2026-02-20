@@ -1,0 +1,41 @@
+● Which tool(s) did you use?
+I used ChatGPT to generate an alternate solution for the same requirements, and then compared that output against my own implementation 
+
+
+● If you used an LLM, what was your prompt to the LLM?
+I used a prompt based on the assignment requirements:
+Write a Python program that generates a family tree using CSV files. 
+Requirements:
+- Start with two people born in 1950.
+- Use life_expectancy.csv to compute death year = birth year + life expectancy for birth decade ±10 years.
+- Use first_names.csv (decade, gender, name, frequency) to choose first names by decade and frequency.
+- Use gender_name_probability.csv to model probability that the first name is gendered (name matches gender) per decade.
+- Use last_names.csv (Decade, Rank, LastName) and rank_to_probability.csv (30 probabilities for ranks 1..30) to choose last names for non-descendants.
+- Descendants of the first two people must have last name equal to one of the two founders.
+- Use birth_and_marriage_rates.csv (decade, birth_rate, marriage_rate) for spouse probability (±10 years birth year) and children count (birth_rate ±1.5, round up bounds).
+- If no spouse, have 1 fewer child.
+- Children birth years evenly spaced from elder parent's birth year +25 through +45.
+- Stop generating children after year 2120.
+- Provide a CLI menu: T total people, D count by decade, N duplicates, Q quit.
+
+
+● What differences are there between your implementation and the LLM?
+- I noticed a difference in coding style in Python. The LLM version leaned toward more advanced Python like @dataclass and heavier structure, but I kept my code closer to what we practiced in class like basic classes, lists, dicts, and clear steps.
+- CSV handling was also unique. The LLM output often assumes shortcuts like pandas or cleaner file formats. My implementation is explicit with with open(...) + csv module, and also handles odd formats like rank_to_probability.csv being a single line.
+- In my version, I fixed a couple subtle edge cases that are easy to miss:
+    - I added a has_generated_children flag to prevent a couple from generating children twice when both partners get processed in the queue.
+    - I updated the child range calculation to match the round up bounds requirement using ceil.
+    - I implemented the gendered first name probability behavior more accurately than the LLM.
+
+
+● What changes would you make to your implementation in general based on suggestions from the LLM?
+ - I’d consider adding an optional debug mode like letting the user input a seed so I can reproduce a run if something looks off, even though I want it random by default.
+ - The LLM used a @dataclass based Person model with type hints and defaults (like Optional and Tuple). That’s cleaner and shorter, but it’s a more advanced Python feature than what we covered.
+
+
+● What changes would you refuse to make?
+- I wouldn’t switch the whole project to patterns we weren’t taught like dataclasses everywhere or over-engineered abstractions, because I want the code to look readable to every programmer.
+- I wouldn’t rely on heavy libraries like pandas for basic CSV parsing, since the standard library works fine and keeps the program simple and readable.
+- I also wouldn’t accept any change that breaks the assignment rules, ignoring the 2120 stop condition even if it makes the code shorter.
+
+
